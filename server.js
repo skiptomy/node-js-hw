@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const app = express();
-const { contactRouter } = require("./contact.router");
+const { contactRouter } = require("./contact/contact.router");
 
 app.use(cors());
 

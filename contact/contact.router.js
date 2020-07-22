@@ -6,12 +6,12 @@ const {
   findContactById,
   findContactByIdAndUpdate,
   findContactByIdAndRemove,
-} = require("./contact.model");
+} = require("../contact/contact.model");
 
 const {
   validateCreateContactMiddleware,
   validateUpdateContactMiddleware,
-} = require("./contact.validator");
+} = require("../contact/contact.validator");
 
 const contactRouter = Router();
 
