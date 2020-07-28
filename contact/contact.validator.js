@@ -3,7 +3,7 @@ const { request } = require("express");
 const Joi = require("@hapi/joi");
 
 const CreateContactSchema = Joi.object({
-  name: Joi.string().min(2).max(20).alphanum().required(),
+  name: Joi.string().min(2).max(30).required(),
 
   email: Joi.string()
     .email({
@@ -12,7 +12,9 @@ const CreateContactSchema = Joi.object({
     })
     .required(),
 
-  phone: Joi.string().min(12).max(13).required(),
+  phone: Joi.string().min(12).max(20).required(),
+
+  password: Joi.string().min(6).max(20).required(),
 });
 
 const UpdateContactSchema = Joi.object({
